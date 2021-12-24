@@ -24,4 +24,12 @@ public class MoodAnalyserTest {
         result = moodAnalyser.analyseMood();
         Assert.assertEquals("HAPPY",result);
     }
+	
+	@Test
+    public void givenNullMood_shouldReturnHappy() throws MoodAnalsyerException
+    {
+        moodAnalyser = new MoodAnalyser(null);
+        result = moodAnalyser.analyseMood();
+        Assert.assertEquals("HAPPY",result);
+    }
 }
