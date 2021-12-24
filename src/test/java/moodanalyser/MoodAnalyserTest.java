@@ -16,4 +16,12 @@ public class MoodAnalyserTest {
         result = moodAnalyser.analyseMood();
         Assert.assertEquals("SAD",result);
     }
+	
+	@Test
+    public void respondAsHappyMood() throws MoodAnalsyerException
+    {
+        moodAnalyser = new MoodAnalyser("I am in Any Mood");
+        result = moodAnalyser.analyseMood();
+        Assert.assertEquals("HAPPY",result);
+    }
 }
